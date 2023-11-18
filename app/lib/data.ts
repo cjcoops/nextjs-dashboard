@@ -8,6 +8,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  LatestInvoice,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -32,7 +33,7 @@ export async function fetchRevenue() {
   }
 }
 
-export async function fetchLatestInvoices() {
+export async function fetchLatestInvoices(): Promise<LatestInvoice[]> {
   noStore();
 
   try {
